@@ -1,0 +1,6 @@
+[submodule "tools/novnc/noVNC"]
+	path = tools/novnc/noVNC
+	url = https://github.com/novnc/noVNC
+[submodule "tools/novnc/websockify"]
+	path = tools/novnc/websockify
+	url = https://github.com/novnc/websockify
