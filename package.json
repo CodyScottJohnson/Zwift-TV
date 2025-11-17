@@ -1,0 +1,16 @@
+{
+  "name": "zwift-tv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "dev:backend": "cd backend && uv run flask --app app:create_app run --debug --port 5001",
+    "dev:frontend": "cd frontend && pnpm dev",
+    "dev": "pnpm dev:backend & pnpm dev:frontend"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

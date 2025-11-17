@@ -1,0 +1,22 @@
+default: # 
+    @just --list
+
+# Run the development server for the backend
+dev:
+    uv run flask --app app:create_app run --debug --port 5001
+
+# Run ruff linter
+lint:
+	uv run ruff check .
+
+# Format code using ruff
+fmt:
+	uv run ruff format .
+
+# Run tests using pytest
+test:
+	uv run pytest
+
+# start a production server using gunicorn
+serve:
+    uv run gunicorn 'wsgi:app' --bind 127.0.0.1:8000 --workers 2 --worker-class gevent --log-level info
